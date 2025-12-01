@@ -2,7 +2,7 @@ package sistema_info;
 
 import java.util.Optional;
 
-public class AuthService {
+public class Autenticacao {
     public Pessoa login(String email, String senha){
         Optional<Pessoa> op = DataStore.findUserByEmail(email);
 
