@@ -15,14 +15,26 @@ public abstract class Pessoa {
         this.senha = senha;
     }
 
-    public String getId() { return id; }
-    public String getNome() { return nome; }
-    public String getEmail() { return email; }
-    public String getSenha() { return senha; }
+    public String getId() { 
+    	return id; 
+    }
+    
+    public String getNome() { 
+    	return nome; 
+    }
+    
+    public String getEmail() { 
+    	return email; 
+    }
+    
+    public String getSenha() { 
+    	return senha; 
+    }
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Pessoa)) return false;
+        if (!(o instanceof Pessoa)) 
+        	return false;
         Pessoa p = (Pessoa) o;
         return Objects.equals(id, p.id);
     }

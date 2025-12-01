@@ -25,18 +25,30 @@ public class DataStore {
         chamados.add(ch);
     }
 
-    public static void addCliente(Cliente c){ clientes.add(c); }
-    public static void addTecnico(Tecnico t){ tecnicos.add(t); }
-    public static void addChamado(Chamado c){ chamados.add(c); }
+    public static void addCliente(Cliente c){ 
+    	clientes.add(c); 
+    }
+    
+    public static void addTecnico(Tecnico t){ 
+    	tecnicos.add(t); 
+    }
+    
+    public static void addChamado(Chamado c){ 
+    	chamados.add(c); 
+    }
 
     public static Optional<Pessoa> findUserByEmail(String email){
-        for(Cliente c : clientes) if(c.getEmail().equalsIgnoreCase(email)) return Optional.of(c);
-        for(Tecnico t : tecnicos) if(t.getEmail().equalsIgnoreCase(email)) return Optional.of(t);
+        for(Cliente c : clientes) if(c.getEmail().equalsIgnoreCase(email)) 
+        	return Optional.of(c);
+        
+        for(Tecnico t : tecnicos) if(t.getEmail().equalsIgnoreCase(email)) 
+        	return Optional.of(t);
         return Optional.empty();
     }
 
     public static Chamado findChamadoById(String id){
-        for(Chamado c : chamados) if(c.getId().equals(id)) return c;
+        for(Chamado c : chamados) if(c.getId().equals(id)) 
+        	return c;
         return null;
     }
 

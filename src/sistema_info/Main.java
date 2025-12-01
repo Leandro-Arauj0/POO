@@ -10,11 +10,11 @@ public class Main {
         AuthService auth = new AuthService();
 
         while (true) {
-            System.out.println("=== SISTEMA DE CHAMADOS - LOGIN ===");
-            System.out.println("1) Entrar");
-            System.out.println("2) Cadastrar cliente");
-            System.out.println("0) Sair");
-            System.out.print("Escolha: ");
+            System.out.println("SISTEMA INFO DE CHAMADOS");
+            System.out.println("1- Entrar");
+            System.out.println("2- Cadastrar cliente");
+            System.out.println("0- Sair");
+            System.out.print("Opção: ");
 
             try {
                 int opt = Integer.parseInt(sc.nextLine());
@@ -82,9 +82,12 @@ public class Main {
                 int opt = Integer.parseInt(sc.nextLine());
                 if (opt == 0) break;
                 switch (opt) {
-                    case 1: abrirChamado(cliente, sc); break;
-                    case 2: listarChamadosCliente(cliente); break;
-                    case 3: visualizarHistoricoCliente(cliente, sc); break;
+                    case 1: abrirChamado(cliente, sc); 
+                    	break;
+                    case 2: listarChamadosCliente(cliente); 
+                    	break;
+                    case 3: visualizarHistoricoCliente(cliente, sc); 
+                    	break;
                     default: System.out.println("Opção inválida.");
                 }
             } catch (NumberFormatException e) { System.out.println("Use números."); }
@@ -102,12 +105,17 @@ public class Main {
             System.out.print("Escolha: ");
             try {
                 int opt = Integer.parseInt(sc.nextLine());
-                if (opt == 0) break;
+                if (opt == 0) 
+                	break;
                 switch (opt) {
-                    case 1: listarChamadosDisponiveis(); break;
-                    case 2: aceitarChamado(tecnico, sc); break;
-                    case 3: atualizarChamado(tecnico, sc); break;
-                    case 4: listarChamadosTecnico(tecnico); break;
+                    case 1: listarChamadosDisponiveis();
+                    	break;
+                    case 2: aceitarChamado(tecnico, sc); 
+                    	break;
+                    case 3: atualizarChamado(tecnico, sc); 
+                    	break;
+                    case 4: listarChamadosTecnico(tecnico); 
+                    	break;
                     default: System.out.println("Opção inválida.");
                 }
             } catch (NumberFormatException e) { System.out.println("Use números."); }

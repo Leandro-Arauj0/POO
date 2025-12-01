@@ -7,7 +7,7 @@ import java.util.List;
 public class Chamado {
     private String id;
     private Cliente cliente;
-    private Tecnico tecnico; // pode ser null até ser atribuído
+    private Tecnico tecnico; // Começa com null
     private Servico servico;
     private String descricao;
     private ChamadoStatus status = ChamadoStatus.ABERTO;
@@ -21,10 +21,6 @@ public class Chamado {
         this.descricao = descricao;
         cliente.addChamado(this);
     }
-
-    // =========================
-    // Getters importantes
-    // =========================
 
     public String getId() {
         return id;
@@ -54,10 +50,6 @@ public class Chamado {
         this.status = status;
     }
 
-    // =========================
-    // Lógica do chamado
-    // =========================
-
     public void assignTo(Tecnico tecnico) {
         if (this.tecnico != null) {
             throw new IllegalStateException("Este chamado já está atribuído a um técnico.");
@@ -80,10 +72,6 @@ public class Chamado {
         }
         return servico.calcularPreco(tecnico);
     }
-
-    // =========================
-    // Exibir histórico
-    // =========================
 
     public void printHistorico() {
         System.out.println("\n===== HISTÓRICO DO CHAMADO " + id + " =====");

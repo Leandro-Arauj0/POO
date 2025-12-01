@@ -12,8 +12,14 @@ public class Cliente extends Pessoa {
         this.endereco = endereco;
     }
 
-    public String getEndereco() { return endereco; }
-    public void addChamado(Chamado c) { chamados.add(c); }
-    public List<Chamado> getChamados() { return chamados; }
+    public String getEndereco() { 
+    	return endereco; 
+    }
+    
+    public void addChamado(Chamado c) { 
+    	chamados.add(c); 
+    }
+    public List<Chamado> getChamados() { 
+    	return chamados; 
+    }
 }
-

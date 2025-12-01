@@ -6,7 +6,10 @@ public enum TipoServico {
     CONSULTORIA("Consultoria");
 
     private final String desc;
-    TipoServico(String d){ this.desc = d; }
-    public String toString(){ return desc; }
+    TipoServico(String d) { 
+    	this.desc = d;  
+    }
+    public String toString() { 
+    	return desc; 
+    }
 }
-

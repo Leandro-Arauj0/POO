@@ -14,8 +14,19 @@ public class Tecnico extends Pessoa {
         this.tarifaBase = tarifaBase;
     }
 
-    public Especializacao getEspecializacao() { return especializacao; }
-    public double getTarifaBase() { return tarifaBase; }
-    public void addChamado(Chamado c) { chamados.add(c); }
-    public List<Chamado> getChamados() { return chamados; }
+    public Especializacao getEspecializacao() { 
+    	return especializacao; 
+    }
+    
+    public double getTarifaBase() { 
+    	return tarifaBase; 
+    }
+    
+    public void addChamado(Chamado c) { 
+    	chamados.add(c); 
+    }
+    
+    public List<Chamado> getChamados() { 
+    	return chamados; 
+    }
 }

@@ -8,7 +8,8 @@ public class AuthService {
 
         if(op.isPresent()){
             Pessoa p = op.get();
-            if(p.getSenha().equals(senha)) return p;
+            if(p.getSenha().equals(senha)) 
+            	return p;
         }
         return null;
     }
