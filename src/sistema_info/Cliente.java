@@ -19,6 +19,7 @@ public class Cliente extends Pessoa {
     public void addChamado(Chamado c) { 
     	chamados.add(c); 
     }
+    
     public List<Chamado> getChamados() { 
     	return chamados; 
     }
